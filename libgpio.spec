@@ -53,7 +53,7 @@ Statyczne biblioteki %{name}.
 %setup  -q -n %{name}
 
 %build
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 autoheader
 %{__autoconf}
