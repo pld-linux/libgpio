@@ -56,8 +56,8 @@ Statyczne biblioteki %{name}.
 libtoolize --copy --force
 aclocal
 autoheader
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 
 %{__make}
