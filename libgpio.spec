@@ -24,7 +24,7 @@ USB, IEE1394 devices.
 
 %description -l pl
 Biblioteka dostarczaj±ca jednolity interfejs dostêpu do urz±dzeñ
-kominikacyjnych np. portów szeregowych i równoleg³ych, USB, IEE1394
+komunikacyjnych np. portów szeregowych i równoleg³ych, USB, IEE1394
 itd.
 
 %package devel
