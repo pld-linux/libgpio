@@ -6,7 +6,9 @@ Version:	0.0.2
 Release:	5.%{snap}
 License:	LGPL
 Group:		Libraries
-Source0:	cvs://:pserver:anonymous@cvs.gphoto.sourceforge.net:/cvsroot/gphoto/%{name}-%{snap}.tar.gz
+# Source0-md5:	d69c918b8a5f6b3188449139124fd1c3
+Source0:	http://ep09.kernel.pl/~djrzulf/%{name}-%{snap}.tar.gz
+#Source0:	cvs://:pserver:anonymous@cvs.gphoto.sourceforge.net:/cvsroot/gphoto/%{name}-%{snap}.tar.gz
 Patch0:		%{name}-alpha.patch
 URL:		http://www.gphoto.net/
 BuildRequires:	autoconf
