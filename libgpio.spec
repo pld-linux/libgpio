@@ -3,10 +3,11 @@ Summary:	GPhoto I/O library
 Summary(pl):	Biblbioteka wej¶cia/wyj¶cia GPhoto
 Name:		libgpio
 Version:	0.0.2
-Release:	4.%{snap}
+Release:	5.%{snap}
 License:	LGPL
 Group:		Libraries
 Source0:	cvs://:pserver:anonymous@cvs.gphoto.sourceforge.net:/cvsroot/gphoto/%{name}-%{snap}.tar.gz
+Patch0:		%{name}-alpha.patch
 URL:		http://www.gphoto.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -50,7 +51,8 @@ This is package with static %{name} libraries.
 Statyczne biblioteki %{name}.
 
 %prep
-%setup  -q -n %{name}
+%setup -q -n %{name}
+%patch -p1
 
 %build
 %{__libtoolize}
@@ -67,17 +69,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README AUTHORS doc/*sections*
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README AUTHORS
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %dir %{_libdir}/gpio
 # ONLY one file == library is required (no symlinks or .la libtool files)
@@ -85,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/*.gz
+%doc doc/*sections*
 %attr(755,root,root) %{_bindir}/*-config
 %attr(755,root,root) %{_libdir}/gpio*.sh
 %attr(755,root,root) %{_libdir}/lib*.so
