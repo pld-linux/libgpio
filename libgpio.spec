@@ -56,8 +56,8 @@ Statyczne biblioteki %{name}.
 
 %build
 %{__libtoolize}
-aclocal
-autoheader
+%{__aclocal}
+%{__autoheader}
 %{__autoconf}
 %{__automake}
 %configure
