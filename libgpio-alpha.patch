@@ -1,0 +1,13 @@
+--- libgpio/configure.in.orig	Sat Dec  2 00:07:29 2000
++++ libgpio/configure.in	Thu Sep  5 11:38:11 2002
+@@ -26,8 +26,8 @@
+ AM_PROG_LIBTOOL
+ 
+ dnl Turn on debugging and catch GNU features incompatible with ANSI C.
+-CFLAGS="$CFLAGS -g -Wall -ansi"
+-LDFLAGS="$LDFLAGS -g -Wall -ansi"
++CFLAGS="$CFLAGS -Wall"
++LDFLAGS="$LDFLAGS -Wall -ansi"
+ 
+ dnl Checks for header files.
+ AC_HEADER_DIRENT
