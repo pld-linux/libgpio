@@ -1,0 +1,99 @@
+--- libgpio/ieee1394/Makefile.am.orig	2000-11-15 17:45:52.000000000 +0100
++++ libgpio/ieee1394/Makefile.am	2004-04-07 22:48:38.355024304 +0200
+@@ -1,11 +1,11 @@
+ ## Specify some includes and versioning
+ INCLUDES = -I../ $(VERSION_FLAGS) -I$(top_srcdir)/include
+ VERSION_FLAGS = -DLIBGPIO_VERSION=\"@LIBGPIO_VERSION@\"
+-CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@ -g
+-LDFLAGS = @LDFLAGS@ -g
++CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@
++LDFLAGS = @LDFLAGS@
+ 
+ ## Compile the IO library into a shared library
+-iolibdir = $(prefix)/lib/gpio
++iolibdir = $(libdir)/gpio
+ iolib_LTLIBRARIES = libgpio_ieee1394.la
+ libgpio_ieee1394_la_LDFLAGS = -version-info @LIBGPIO_VERSION_INFO@ -DHAVE_TERMIOS_H 
+ libgpio_ieee1394_la_SOURCES = linux-raw.c gpio-ieee1394.h
+--- libgpio/libgpio/Makefile.am.orig	2000-11-15 17:45:52.000000000 +0100
++++ libgpio/libgpio/Makefile.am	2004-04-07 22:48:55.759378440 +0200
+@@ -2,9 +2,8 @@
+ INCLUDES = -I../ $(VERSION_FLAGS) -I$(top_srcdir)/include
+ VERSION_FLAGS = -DLIBGPIO_VERSION=\"@LIBGPIO_VERSION@\"
+ CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@ \
+-	-DIOLIBS=\"$(prefix)/lib/gpio\" \
+-	-g
+-LDFLAGS = @LDFLAGS@ -g -ldl
++	-DIOLIBS=\"$(libdir)/gpio\"
++LDFLAGS = @LDFLAGS@ -ldl
+ 
+ ## Compile the IO library into a shared library
+ lib_LTLIBRARIES = libgpio.la
+--- libgpio/network/Makefile.am.orig	2000-11-15 17:45:52.000000000 +0100
++++ libgpio/network/Makefile.am	2004-04-07 22:49:09.078353648 +0200
+@@ -1,11 +1,11 @@
+ ## Specify some includes and versioning
+ INCLUDES = -I../ $(VERSION_FLAGS) -I$(top_srcdir)/include
+ VERSION_FLAGS = -DLIBGPIO_VERSION=\"@LIBGPIO_VERSION@\"
+-CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@ -g
+-LDFLAGS = @LDFLAGS@ -g 
++CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@
++LDFLAGS = @LDFLAGS@
+ 
+ ## Compile the IO library into a shared library
+-iolibdir = $(prefix)/lib/gpio
++iolibdir = $(libdir)/gpio
+ iolib_LTLIBRARIES = libgpio_network.la
+ libgpio_network_la_LDFLAGS = -version-info @LIBGPIO_VERSION_INFO@ -DHAVE_TERMIOS_H 
+ libgpio_network_la_SOURCES = bsdsocket.c gpio-network.h
+--- libgpio/parallel/Makefile.am.orig	2000-11-15 17:45:52.000000000 +0100
++++ libgpio/parallel/Makefile.am	2004-04-07 22:49:27.166603816 +0200
+@@ -1,11 +1,11 @@
+ ## Specify some includes and versioning
+ INCLUDES = -I../ $(VERSION_FLAGS) -I$(top_srcdir)/include
+ VERSION_FLAGS = -DLIBGPIO_VERSION=\"@LIBGPIO_VERSION@\"
+-CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@ -g
+-LDFLAGS = @LDFLAGS@ -g 
++CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@
++LDFLAGS = @LDFLAGS@
+ 
+ ## Compile the IO library into a shared library
+-iolibdir = $(prefix)/lib/gpio
++iolibdir = $(libdir)/gpio
+ iolib_LTLIBRARIES = libgpio_parallel.la
+ libgpio_parallel_la_LDFLAGS = -version-info @LIBGPIO_VERSION_INFO@ -DHAVE_TERMIOS_H 
+ libgpio_parallel_la_SOURCES = unix.c gpio-parallel.h
+--- libgpio/serial/Makefile.am.orig	2000-11-15 17:45:52.000000000 +0100
++++ libgpio/serial/Makefile.am	2004-04-07 22:49:39.263764768 +0200
+@@ -1,11 +1,11 @@
+ ## Specify some includes and versioning
+ INCLUDES = -I../ $(VERSION_FLAGS) -I$(top_srcdir)/include
+ VERSION_FLAGS = -DLIBGPIO_VERSION=\"@LIBGPIO_VERSION@\" -DHAVE_TERMIOS_H
+-CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@ -g
+-LDFLAGS = @LDFLAGS@ -g 
++CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@
++LDFLAGS = @LDFLAGS@
+ 
+ ## Compile the IO library into a shared library
+-iolibdir = $(prefix)/lib/gpio
++iolibdir = $(libdir)/gpio
+ iolib_LTLIBRARIES = libgpio_serial.la
+ libgpio_serial_la_LDFLAGS = -version-info @LIBGPIO_VERSION_INFO@ -DHAVE_TERMIOS_H 
+ libgpio_serial_la_SOURCES = unix.c
+--- libgpio/usb/Makefile.am.orig	2000-11-15 17:45:52.000000000 +0100
++++ libgpio/usb/Makefile.am	2004-04-07 22:49:57.297023296 +0200
+@@ -1,11 +1,11 @@
+ ## Specify some includes and versioning
+ INCLUDES = -I../ $(VERSION_FLAGS) -I$(top_srcdir)/include
+ VERSION_FLAGS = -DLIBGPIO_VERSION=\"@LIBGPIO_VERSION@\"
+-CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@ -g `libusb-config --cflags`
+-LDFLAGS = @LDFLAGS@ -g `libusb-config --libs`
++CFLAGS = @CFLAGS@ @IOLIB_CFLAGS@ `libusb-config --cflags`
++LDFLAGS = @LDFLAGS@ `libusb-config --libs`
+ 
+ ## Compile the IO library into a shared library
+-iolibdir = $(prefix)/lib/gpio
++iolibdir = $(libdir)/gpio
+ iolib_LTLIBRARIES = libgpio_usb.la
+ libgpio_usb_la_LDFLAGS = -version-info @LIBGPIO_VERSION_INFO@
+ libgpio_usb_la_SOURCES = libusb.c
