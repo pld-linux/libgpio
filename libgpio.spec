@@ -3,7 +3,7 @@ Summary:	GPhoto I/O library
 Summary(pl):	Biblbioteka wej╤cia/wyj╤cia GPhoto
 Name:		libgpio
 Version:	0.0.2
-Release:	2.%{snap}
+Release:	3.%{snap}
 License:	LGPL
 Group:		Libraries
 Group(de):	Libraries
@@ -62,7 +62,7 @@ Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	Разработка/Библиотеки
 Group(uk):	Розробка/Б╕бл╕отеки
-Requires:	%{name} = %{version}
+Requires:	%{name}-devel = %{version}
 
 %description static
 This is package with static %{name} libraries.
