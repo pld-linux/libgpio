@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%attr(755,root,root) %{_libdir}/lib*.so.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 %dir %{_libdir}/gpio
 # ONLY one file == library is required (no symlinks or .la libtool files)
 %attr(755,root,root) %{_libdir}/gpio/lib*.so.*.*.*
