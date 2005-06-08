@@ -3,7 +3,7 @@ Summary:	GPhoto I/O library
 Summary(pl):	Biblbioteka wej¶cia/wyj¶cia GPhoto
 Name:		libgpio
 Version:	0.0.2
-Release:	5.%{snap}.1
+Release:	6.%{snap}.1
 License:	LGPL
 Group:		Libraries
 # Source0-md5:	d69c918b8a5f6b3188449139124fd1c3
@@ -31,6 +31,7 @@ itd.
 Summary:	%{name} library headers
 Summary(pl):	Pliki nag³ówkowe biblioteki %{name}
 Group:		Development/Libraries
+Requires:	libusb-devel >= 0.1.5
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
