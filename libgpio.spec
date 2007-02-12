@@ -1,6 +1,6 @@
 %define		snap	20010730
 Summary:	GPhoto I/O library
-Summary(pl):	Biblbioteka wej∂cia/wyj∂cia GPhoto
+Summary(pl.UTF-8):   Biblbioteka wej≈õcia/wyj≈õcia GPhoto
 Name:		libgpio
 Version:	0.0.2
 Release:	6.%{snap}.1
@@ -22,14 +22,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Library which provides uniform interface to access serial, parallel,
 USB, IEE1394 devices.
 
-%description -l pl
-Biblioteka dostarczaj±ca jednolity interfejs dostÍpu do urz±dzeÒ
-komunikacyjnych np. portÛw szeregowych i rÛwnoleg≥ych, USB, IEE1394
+%description -l pl.UTF-8
+Biblioteka dostarczajƒÖca jednolity interfejs dostƒôpu do urzƒÖdze≈Ñ
+komunikacyjnych np. port√≥w szeregowych i r√≥wnoleg≈Çych, USB, IEE1394
 itd.
 
 %package devel
 Summary:	%{name} library headers
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki %{name}
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki %{name}
 Group:		Development/Libraries
 Requires:	libusb-devel >= 0.1.5
 Requires:	%{name} = %{version}-%{release}
@@ -38,20 +38,20 @@ Requires:	%{name} = %{version}-%{release}
 This is the libraries, include files and other resources you can use
 to incorporate %{name} into applications.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe oraz dokumentacja pozwalaj±ca na dodawanie obs≥ugi
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe oraz dokumentacja pozwalajƒÖca na dodawanie obs≈Çugi
 %{name} w swoich programach.
 
 %package static
 Summary:	Static %{name} libraries
-Summary(pl):	Statyczne biblioteki %{name}
+Summary(pl.UTF-8):   Statyczne biblioteki %{name}
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static %{name} libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki %{name}.
 
 %prep
