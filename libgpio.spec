@@ -1,6 +1,6 @@
 %define		snap	20010730
 Summary:	GPhoto I/O library
-Summary(pl.UTF-8):   Biblbioteka wejścia/wyjścia GPhoto
+Summary(pl.UTF-8):	Biblbioteka wejścia/wyjścia GPhoto
 Name:		libgpio
 Version:	0.0.2
 Release:	6.%{snap}.1
@@ -29,7 +29,7 @@ itd.
 
 %package devel
 Summary:	%{name} library headers
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki %{name}
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki %{name}
 Group:		Development/Libraries
 Requires:	libusb-devel >= 0.1.5
 Requires:	%{name} = %{version}-%{release}
@@ -44,7 +44,7 @@ Pliki nagłówkowe oraz dokumentacja pozwalająca na dodawanie obsługi
 
 %package static
 Summary:	Static %{name} libraries
-Summary(pl.UTF-8):   Statyczne biblioteki %{name}
+Summary(pl.UTF-8):	Statyczne biblioteki %{name}
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
